@@ -9,7 +9,7 @@
 
     <!-- Question TextView -->
     <TextView
-        android:id="@+id/tvQuestion"
+        android:id="@+id/question"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Question goes here"
@@ -27,7 +27,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tvQuestion"
+        app:layout_constraintTop_toBottomOf="@id/question"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

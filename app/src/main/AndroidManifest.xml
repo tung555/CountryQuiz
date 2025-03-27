@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CountryQuiz">
 
-        <!-- Main Activity (Launcher) -->
         <activity
             android:name=".activities.MainActivity"
             android:exported="true">
@@ -20,12 +19,10 @@
             </intent-filter>
         </activity>
 
-        <!-- Quiz Activity -->
         <activity
             android:name=".activities.QuizActivity"
             android:exported="true" />
 
-        <!-- Results Activity -->
         <activity
             android:name=".activities.ResultsActivity"
             android:exported="true" />

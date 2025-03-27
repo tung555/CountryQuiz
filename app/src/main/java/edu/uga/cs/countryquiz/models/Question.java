@@ -16,7 +16,6 @@ public class Question implements Serializable {
         this.userAnswer = null;
     }
 
-    // Getters and setters
     public Country getCountry() { return country; }
     public void setCountry(Country country) { this.country = country; }
     public List<String> getOptions() { return options; }

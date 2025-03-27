@@ -19,7 +19,6 @@ import edu.uga.cs.countryquiz.activities.ResultsActivity;
 public class QuizResultFragment extends Fragment {
     private static final String ARG_SCORE = "score";
     private Integer score = null;
-    private Button homePage;
 
     public QuizResultFragment() { }
 
@@ -41,9 +40,8 @@ public class QuizResultFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView tv = view.findViewById(R.id.tvFinalScore);
+        TextView tv = view.findViewById(R.id.finalScore);
 
-        // If score was passed in args, set it now
         if (getArguments() != null) {
             score = getArguments().getInt(ARG_SCORE);
         }
@@ -51,28 +49,24 @@ public class QuizResultFragment extends Fragment {
             tv.setText("You scored " + score + "/6!");
         }
 
-        // Wire up buttons
-        Button btnNewQuiz = view.findViewById(R.id.btnHomePage);
+        Button btnHomePage = view.findViewById(R.id.btnHomePage);
         Button btnViewPast = view.findViewById(R.id.btnViewPastResults);
 
-        btnNewQuiz.setOnClickListener(v -> {
-            // Restart quiz: pop back to QuizActivity’s first page
+        btnHomePage.setOnClickListener(v -> {
             requireActivity().finish();
             startActivity(new Intent(requireContext(), MainActivity.class));
         });
 
         btnViewPast.setOnClickListener(v -> {
-            // Navigate to ResultsActivity
             startActivity(new Intent(requireContext(), ResultsActivity.class));
         });
     }
 
-    /** Public method — stores value until view is ready */
     public void displayScore(int newScore) {
         score = newScore;
         View v = getView();
         if (v != null) {
-            TextView tv = v.findViewById(R.id.tvFinalScore);
+            TextView tv = v.findViewById(R.id.finalScore);
             if (tv != null) {
                 tv.setText("You scored " + newScore + "/6!");
             }

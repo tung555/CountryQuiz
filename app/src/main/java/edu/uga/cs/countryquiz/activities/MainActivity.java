@@ -14,8 +14,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Optionally populate the database from CSV (run AsyncTask)
-        //new DatabaseAsyncTask(this).execute();
 
         setContentView(R.layout.activity_main);
 

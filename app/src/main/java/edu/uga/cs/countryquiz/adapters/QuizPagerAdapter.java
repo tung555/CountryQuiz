@@ -26,7 +26,6 @@ public class QuizPagerAdapter extends FragmentStateAdapter {
         if (position < questions.size()) {
             return QuizFragment.newInstance(questions.get(position));
         } else {
-            // Return result fragment with a placeholder score (Activity will update it)
             return QuizResultFragment.newInstance(0);
         }
     }

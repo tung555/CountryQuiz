@@ -17,8 +17,6 @@ public class CSVReader {
             InputStream is = context.getAssets().open(fileName);
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             String line;
-            // Optionally skip header:
-            // reader.readLine();
             while ((line = reader.readLine()) != null) {
                 String[] tokens = line.split(",");
                 if (tokens.length >= 2) {

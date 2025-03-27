@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/tvResultsTitle"
+        android:id="@+id/resultsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quiz Results"
@@ -19,12 +19,12 @@
         android:layout_marginTop="32dp"/>
 
     <TextView
-        android:id="@+id/tvResultsContent"
+        android:id="@+id/resultsContent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Loading results..."
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/tvResultsTitle"
+        app:layout_constraintTop_toBottomOf="@id/resultsTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
@@ -37,6 +37,6 @@
         android:text="Back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvResultsContent" />
+        app:layout_constraintTop_toBottomOf="@id/resultsContent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

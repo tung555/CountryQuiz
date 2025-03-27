@@ -26,7 +26,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // For development, simply drop and recreate
         db.execSQL("DROP TABLE IF EXISTS quizResults");
         onCreate(db);
     }

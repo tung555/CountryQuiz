@@ -35,7 +35,6 @@ public class QuizActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
         questions = new ArrayList<>();
 
-        // Load and select 6 random countries
         List<Country> allCountries = CSVReader.readCountriesFromCSV(this, "country_continent.csv");
         if (allCountries == null || allCountries.size() < 6) {
             Log.e("QuizActivity", "Not enough countries!");

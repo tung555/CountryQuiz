@@ -19,7 +19,6 @@ public class QuizFragment extends Fragment {
     private static final String ARG_QUESTION = "question";
     private Question question;
 
-    // UI references as fields
     private TextView tvQuestion;
     private RadioGroup rgOptions;
     private RadioButton rbOption1, rbOption2, rbOption3;
@@ -49,8 +48,7 @@ public class QuizFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_quiz, container, false);
 
-        // Bind views
-        tvQuestion = view.findViewById(R.id.tvQuestion);
+        tvQuestion = view.findViewById(R.id.question);
         rgOptions = view.findViewById(R.id.rgOptions);
         rbOption1 = view.findViewById(R.id.rbOption1);
         rbOption2 = view.findViewById(R.id.rbOption2);
@@ -81,7 +79,6 @@ public class QuizFragment extends Fragment {
         }
     }
 
-    /** Public method to disable all answer options */
     public void disableOptions() {
         rgOptions.setEnabled(false);
         rbOption1.setEnabled(false);

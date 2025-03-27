@@ -23,8 +23,8 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-        tvResultsContent = findViewById(R.id.tvResultsContent);
-        btnBack = findViewById(R.id.btnBack);   // match your layout ID
+        tvResultsContent = findViewById(R.id.resultsContent);
+        btnBack = findViewById(R.id.btnBack);
 
         btnBack.setOnClickListener(v -> finish());
 
